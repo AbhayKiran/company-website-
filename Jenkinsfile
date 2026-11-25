@@ -11,11 +11,11 @@ pipeline {
 
     environment {
         // ---- REPLACE THESE PLACEHOLDERS (see README.md) ----
-        DOCKERHUB_USERNAME      = 'DOCKERHUB_USERNAME'
-        DOCKERHUB_REPOSITORY    = 'DOCKERHUB_REPOSITORY'
-        DOCKERHUB_CREDENTIAL_ID = 'DOCKERHUB_CREDENTIAL_ID'
-        DEPLOYMENT_SERVER_IP    = 'DEPLOYMENT_SERVER_IP'
-        GITHUB_REPOSITORY_URL   = 'GITHUB_REPOSITORY_URL'
+        DOCKERHUB_USERNAME      = 'abhaykiran'
+        DOCKERHUB_REPOSITORY    = 'company-website'
+        DOCKERHUB_CREDENTIAL_ID = 'dockerhub-credentials'
+        DEPLOYMENT_SERVER_IP    = '52.34.211.206'
+        GITHUB_REPOSITORY_URL   = 'https://github.com/AbhayKiran/company-website-.git'
         // -----------------------------------------------------
 
         IMAGE_NAME     = "${DOCKERHUB_USERNAME}/${DOCKERHUB_REPOSITORY}"
