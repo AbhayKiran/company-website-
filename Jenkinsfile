@@ -34,7 +34,7 @@ pipeline {
 
                 stage('Fetch GitHub Repository') {
                     steps {
-                        git url: "${GITHUB_REPOSITORY_URL}", branch: 'main'
+                        git url: "${GITHUB_REPOSITORY_URL}", branch: 'main', credentialsId: 'git-access'
                     }
                 }
 
