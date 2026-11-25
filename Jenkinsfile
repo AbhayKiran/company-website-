@@ -50,7 +50,7 @@ pipeline {
                     steps {
                         withCredentials([usernamePassword(
                             credentialsId: "${DOCKERHUB_CREDENTIAL_ID}",
-                            usernameVariable: 'DH_USER'
+                            usernameVariable: 'abhaykiran'
                         )]) {
                             sh 'docker login -u "$DH_USER" --password-stdin'
                         }
@@ -86,11 +86,10 @@ pipeline {
                         // Login is only needed if the Docker Hub repository is private.
                         withCredentials([usernamePassword(
                             credentialsId: "${DOCKERHUB_CREDENTIAL_ID}",
-                            usernameVariable: 'abhaykiran',
-                            passwordVariable: 'DH_PASS'
+                            usernameVariable: 'abhaykiran'
                         )]) {
                             sh '''
-                                echo "$DH_PASS" | docker login -u "$DH_USER" --password-stdin
+                                docker login -u "$DH_USER" --password-stdin
                                 docker pull "$IMAGE_NAME:$IMAGE_TAG"
                             '''
                         }
